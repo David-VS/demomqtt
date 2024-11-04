@@ -2,7 +2,7 @@ from paho.mqtt import client
 import random
 
 
-broker = 'd95a9dde.ala.us-east-1.emqxsl.com'
+broker = 'd026818d.ala.eu-central-1.emqxsl.com'
 port = 8883
 username= '2iot'
 password = '3iot'
