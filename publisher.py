@@ -7,7 +7,7 @@ broker = 'd026818d.ala.eu-central-1.emqxsl.com'
 port = 8883
 username= '2iot'
 password = '3iot'
-client_id = f'2io-{random.randint(0, 69420)}t'
+
 
 
 def connect():
@@ -17,7 +17,7 @@ def connect():
         else:
             print("connection failed for reasons")
 
-    my_client = client.Client(client_id)
+    my_client = client.Client(client.CallbackAPIVersion.VERSION2)
     my_client.tls_set(ca_certs='./certificates/emqxsl-ca.crt')
     my_client.username_pw_set(username, password)
     my_client.connect(broker, port)
