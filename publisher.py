@@ -1,5 +1,4 @@
 from paho.mqtt import client
-import random
 import time
 
 
@@ -11,7 +10,7 @@ password = '3iot'
 
 
 def connect():
-    def on_connect(client, userdata, flags, reason_code):
+    def on_connect(client, userdata, flags, reason_code, properties=None):
         if reason_code == 0:
             print("Connected succesfully")
         else:
@@ -41,7 +40,6 @@ def publish(my_client):
 
 def run():
     my_client = connect()
-    my_client.loop_start()
     publish(my_client)
 
 

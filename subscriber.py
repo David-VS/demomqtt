@@ -10,7 +10,7 @@ password = '3iot'
 
 
 def connect():
-    def on_connect(client, userdata, flags, reason_code):
+    def on_connect(client, userdata, flags, reason_code, properties=None):
         if reason_code == 0:
             print("Connected succesfully")
         else:
